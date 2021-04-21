@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - DSP Effect Per Speaker</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+
+        <br/>
+        <br/>
+        <a href = "index.html"><- Return to menu</a>
+        <br/>
+        <br/>
+        <strong>DSP Effect Per Speaker Example</strong><br/>
+        Copyright (c) Firelight Technologies 2018-2021.  For help using FMOD please visit <a href="http://www.fmod.com">http://www.fmod.com/</a><br/>
+        Open browser debug console to see error messages and example logging output<br/>
+        <br/>
+        <p class="clickscreen">Click or touch screen to unmute audio!</p>
+        <br/>
+        <br/>
+
+        <button type="button" onclick="toggleEffect(0)">Toggle lowpass (left speaker)</button> 
+        <output for="effect0" id="effect0_out">Off</output><br/>
+        <br/>
+        <button type="button" onclick="toggleEffect(1)">Toggle highpass (right speaker)</button> 
+        <output for="effect1" id="effect1_out">Off</output><br/>
+        <br/>
+
+        <form>
+            <label for="pan">Pan sound</label>
+            <input id="pan" type="range" min="-1" max="1" step=".01" value = "0" oninput="panChanged(this.value)" >
+            <output for="pan" id="pan_out">0</output>
+        </form>
+
+        <div class = "bottominfo">
+            <output id="display_out">Please wait... Loading...</output><br/>
+            <br/>
+            <output id="display_out2"></output><br/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="fmod.js"></script>
+    <script type="text/javascript" src="dsp_effect_per_speaker.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - Low Level</title>
+</head>
+
+<body>
+    <div class="home_content">
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+        <section id="boxes">
+            <br/>
+            <br/>
+            <h1>FMOD Low Level Examples</h1>
+            <div id="box1">
+                <div id="boxback"><a href="playstream.html"><img alt="Play Stream" src="images/aside-image2.jpg" /></a></p>
+                    <hgroup>
+                    <h3>Play Stream</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">This example shows how to simply play a stream such as an MP3 or WAV.  This makes FMOD decode the file in realtime as it plays, instead of loading it all at once which uses far less memory in exchange for a small runtime CPU hit.</p> 
+                </div>
+            </div>
+            <div id="box2">
+                <div id="boxback"><a href="playsound.html"><img alt="Play Sound" src="images/aside-image2.jpg" /></a></p>
+                <hgroup>
+                <h3>Play Sound</h3>
+                </hgroup>
+                <p id="boxed" align="left">This example shows how to simply load and play multiple sounds, the simplest usage of FMOD. By default FMOD will decode the entire file into memory when it
+                    loads.</p>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="boxback"><a href="3d.html"><img alt="3D Sound" src="images/aside-image2.jpg" /></a></p>
+                    <hgroup>
+                        <h3>3D Sound</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">This example shows how to basic 3D positioning of sounds.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div id="box1">
+                <div id="boxback"><a href="convolution_reverb.html"><img alt="Convolution Reverb" src="images/aside-image2.jpg"/></a></p>
+                    <hgroup>
+                    <h3>Convolution Reverb</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">This example shows how to set up a convolution reverb DSP as a global DSP unit that can be routed into by multiple seperate channels. Convolution reverb uses data from a real world locations called an 
+"Impulse Response" to model the reflection of audio waves back to a listener.</p> 
+                </div>
+            </div>
+            <div id="box2">
+                <div id="boxback"><a href="effects.html"><img alt="Effects" src="images/aside-image2.jpg"/></a></p>
+                <hgroup>
+                <h3>Effects</h3>
+                </hgroup>
+                <p id="boxed" align="left">This example shows how to apply some of the built in software effects to sounds by applying them to the master channel group. All software sounds played here would be filtered in the same way.</p>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="boxback"><a href="channelgroups.html"><img alt="Channel Groups" src="images/aside-image2.jpg"/></a></p>
+                    <hgroup>
+                        <h3>Channel Groups</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">This example shows how to put channels into channel groups, so that you can affect a group of channels at a time instead of just one.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div id="box1">
+                <div id="boxback"><a href="generate_tone.html"><img alt="Generate Tone" src="images/aside-image2.jpg"/></a></p>
+                    <hgroup>
+                    <h3>Generate Tone</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">This example shows how to play generated tones using System::playDSP instead of manually connecting and disconnecting DSP units.</p> 
+                </div>
+            </div>
+            <div id="box2">
+                <div id="boxback"><a href="dsp_effect_per_speaker.html"><img alt="DSP Effect Per Speaker" src="images/aside-image2.jpg"/></a></p>
+                <hgroup>
+                <h3>DSP Effect Per Speaker</h3>
+                </hgroup>
+                <p id="boxed" align="left">This example shows how to manipulate a DSP network and as an example, creates 2 DSP effects, splitting a single sound into 2 audio paths, which it then filters seperately.</p>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="boxback"><a href="gapless_playback.html"><img alt="Gapless Playback" src="images/aside-image2.jpg"/></a></p>
+                    <hgroup>
+                        <h3>Gapless Playback</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">This example shows how to schedule channel playback into the future with sample accuracy.  Use several scheduled channels to synchronize 2 or more sounds.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div id="box1">
+                <div id="boxback"><a href="multiple_speaker.html"><img alt="Multiple Speaker" src="images/aside-image2.jpg"/></a></p>
+                    <hgroup>
+                    <h3>Multiple Speaker</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">This example shows how to play sounds in multiple speakers, and also how to even assign sound subchannels, such as those in a stereo sound to different individual speakers.</p> 
+                </div>
+            </div>
+            <div id="box2">
+                <div id="boxback"><a href="dsp_custom.html"><img alt="DSP Custom" src="images/aside-image2.jpg"/></a></p>
+                <hgroup>
+                <h3>DSP Custom</h3>
+                </hgroup>
+                <p id="boxed" align="left">This example shows how to manipulate a DSP network and as an example, creates 2 DSP effects, splitting a single sound into 2 audio paths, which it then filters seperately.</p>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="boxback"><a href="granular_synth.html"><img alt="Granular Synth" src="images/aside-image2.jpg"/></a></p>
+                <hgroup>
+                <h3>Granular Synth</h3>
+                </hgroup>
+                <p id="boxed" align="left">This example shows how you can play a string of sounds together without gaps, using the setDelay command, to produce a granular synthesis style truck engine effect.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+    
+            <div id="box2">
+                <div id="boxback"><a href="user_created_sound.html"><img alt="User Created Sound" src="images/aside-image2.jpg"/></a></p>
+                <hgroup>
+                <h3>User Created Sound</h3>
+                </hgroup>
+                <p id="boxed" align="left">This example shows how create a sound with data filled by the user. It shows a user created static sample, followed by a user created
+                 stream. The former allocates all memory needed for the sound and is played back as a static sample, while the latter streams the data in chunks as it plays,
+                 using far less memory.</p>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="boxback"><a href="load_from_memory.html"><img alt="Load From Memory" src="images/aside-image2.jpg"/></a></p>
+                    <hgroup>
+                        <h3>Load From Memory</h3>
+                    </hgroup>
+                    <p id="boxed" align="left">Play any sound from disk.  This example is simply a variant of the Play Sound Example, but it loads the data into memory then uses the 'load from memory' feature of System::createSound.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+
+        </section>
+    </div>
+    </div>
+</body>
+</html>

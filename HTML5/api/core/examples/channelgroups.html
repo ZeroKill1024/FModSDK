@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - Channel Groups</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+
+        <br/>
+        <br/>
+        <a href = "index.html"><- Return to menu</a>
+        <br/>
+        <br/>
+        <strong>Channel Groups Example</strong><br/>
+        Copyright (c) Firelight Technologies 2018-2021.  For help using FMOD please visit <a href="http://www.fmod.com">http://www.fmod.com/</a><br/>
+        Open browser debug console to see error messages and example logging output<br/>
+        <br/>
+        <p class="clickscreen">Click or touch screen to unmute audio!</p>
+        <br/>
+        <br/>
+
+        <button type="button0" onclick="muteGroup(0)">Mute Group A (drum/lion)</button>
+        <output for="button0" id="mute0">Off</output><br/>
+        <br/>
+        <button type="button1" onclick="muteGroup(1)">Mute Group B (crowd/vacuum)</button>
+        <output for="button1" id="mute1">Off</output><br/>
+        <br/>
+        <button type="button2" onclick="muteGroup(2)">Mute Master Group</button>
+        <output for="button2" id="mute2">Off</output><br/>
+        <br/>
+        <br/>
+
+        <form>
+            <label for="volume0">Group A Volume</label>
+            <input id="volume0" type="range" min="0" max="2" step=".01" value=".6" oninput="volumeChanged(0, this.value)" >
+            <output for="volume0" id="volume_out0">0.6</output>
+        </form>
+        <form>
+            <label for="volume1">Group B Volume</label>
+            <input id="volume1" type="range" min="0" max="2" step=".01" value=".4" oninput="volumeChanged(1, this.value)" >
+            <output for="volume1" id="volume_out1">0.4</output>
+        </form>
+        <form>
+            <label for="volume2">Master Volume</label>
+            <input id="volume2" type="range" min="0" max="2" step=".01" oninput="volumeChanged(2, this.value)" >
+            <output for="volume2" id="volume_out2">1.0</output>
+        </form>
+
+        <div class = "bottominfo">
+            <output id="display_out">Please wait... Loading...</output><br/>
+            <br/>
+            <output id="display_out2"></output><br/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="fmod.js"></script>
+    <script type="text/javascript" src="channelgroups.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - PlaySound</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+
+        <br/>
+        <br/>
+        <a href = "index.html"><- Return to menu</a>
+        <br/>
+        <br/>
+        <strong>PlaySound Example</strong><br/>
+        Copyright (c) Firelight Technologies 2018-2021.  For help using FMOD please visit <a href="http://www.fmod.com">http://www.fmod.com/</a><br/>
+        Open browser debug console to see error messages and example logging output<br/>
+        <br/>
+        <p class="clickscreen">Click or touch screen to unmute audio!</p>
+        <br/>
+        <br/>
+
+        <button type="button" onclick="playSound(0)">Play Sound - Dog</button>
+        <button type="button" onclick="playSound(1)">Play Sound - Lion</button>
+        <button type="button" onclick="playSound(2)">Play Sound - Music</button>
+        <br/>
+        <br/>
+        <button type="button" onclick="stopAll()">Stop All Sounds!</button><br/>
+        <br/>
+        <button type="button" onclick="toggleEffects()">Toggle reverb on master</button> 
+        <output for="effects" id="effects_out">Off</output><br/>
+        <br/>
+
+        <form>
+            <label for="volume">Volume of most recent sound played</label>
+            <input id="volume" type="range" min="0" max="2" step=".01" oninput="volumeChanged(this.value)" >
+            <output for="volume" id="volume_out">1.0</output>
+        </form>
+
+        <div class = "bottominfo">
+            <output id="display_out">Please wait... Loading...</output><br/>
+            <br/>
+            <output id="display_out2"></output><br/>
+        </div>
+        <br/>
+        <output id="display_out3"></output><br/>
+    </div>
+
+    <script type="text/javascript" src="fmod.js"></script>
+    <script type="text/javascript" src="playsound.js"></script>
+
+</body>
+</html>

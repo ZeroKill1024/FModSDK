@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - Programmer Sound</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+
+        <br/>
+        <br/>
+        <a href = "index.html"><- Return to menu</a>
+        <br/>
+        <br/>
+        <strong>Programmer Sound</strong><br/>
+        Copyright (c) Firelight Technologies 2018-2021.  For help using FMOD please visit <a href="http://www.fmod.com">http://www.fmod.com/</a><br/>
+        Open browser debug console to see error messages and example logging output<br/>
+        <br/>
+        <p class="clickscreen">Click or touch screen to unmute audio!</p>
+        <br/>
+        <br/>
+
+        <strong>Language</strong>
+        <form id="languageBank" style="margin-left:40px">
+            <input type="radio" name="language" value="Dialogue_EN" checked> English<br>
+            <input type="radio" name="language" value="Dialogue_JP"> Japanese<br>
+            <input type="radio" name="language" value="Dialogue_CN"> Chinese<br>
+        </form>
+        
+        <br>
+
+        <strong>Dialogue</strong>
+        <form action="" style="margin-left:40px">
+            <input type="radio" name="dialogue" value="welcome" checked> Welcome to the FMOD Studio tutorial<br>
+            <input type="radio" name="dialogue" value="main menu"> This is the main menu<br>
+            <input type="radio" name="dialogue" value="goodbye"> Goodbye<br>
+        </form>
+
+        <br>
+
+        <button type="button" id="playEvent" onclick="playEvent()" disabled>Play event</button>
+
+        <div class = "bottominfo">
+            <output id="display_out">Please wait... Loading...</output><br/>
+            <br/>
+            <output id="display_out2"></output><br/>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="fmodstudio.js"></script>
+    <script type="text/javascript" src="programmer_sound.js"></script>
+
+</body>
+</html>

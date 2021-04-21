@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - Event Parameter</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+
+        <br/>
+        <br/>
+        <a href = "index.html"><- Return to menu</a>
+        <br/>
+        <br/>
+        <strong>Event Parameter</strong><br/>
+        Copyright (c) Firelight Technologies 2018-2021.  For help using FMOD please visit <a href="http://www.fmod.com">http://www.fmod.com/</a><br/>
+        Open browser debug console to see error messages and example logging output<br/>
+        <br/>
+        <p class="clickscreen">Click or touch screen to unmute audio!</p>
+        <br/>
+        <br/>
+        <form>
+            <label for="surfaceparameter">Surface Parameter Value</label>
+            <input id="surfaceparameter" type="range" min="0" max="3" step="1" value="0" oninput="paramChanged(this.value)" disabled>
+            <output for="surfaceparameter" id="surfaceparameter_out">0</output>
+        </form>
+        <br/>        
+        0 = carpet, 1 = short grass, 2 = wood, 3 = silent</br>
+        <br/>
+
+        <button id="playButton" onclick="playEvent();" disabled>Play event</button>
+
+        <div class = "bottominfo">
+            <output id="display_out">Please wait... Loading...</output><br/>
+            <br/>
+            <output id="display_out2"></output><br/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="fmodstudio.js"></script>
+    <script type="text/javascript" src="event_parameter.js"></script>
+
+</body>
+</html>

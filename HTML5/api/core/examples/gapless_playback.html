@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - Gapless Playback</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+
+        <br/>
+        <br/>
+        <a href = "index.html"><- Return to menu</a>
+        <br/>
+        <br/>
+        <strong>Gapless Playback Example</strong><br/>
+        Copyright (c) Firelight Technologies 2018-2021.  For help using FMOD please visit <a href="http://www.fmod.com">http://www.fmod.com/</a><br/>
+        Open browser debug console to see error messages and example logging output<br/>
+        <br/>
+        <p class="clickscreen">Click or touch screen to unmute audio!</p>
+        <br/>
+        <br/>
+
+        <button type="button" onclick="togglePause()">Toggle pause state</button> 
+        <output for="pause" id="pause_out">Playing</output><br/>
+        <br/>
+
+        <form>
+            <label for="pitch">Pitch adjust</label>
+            <input id="pitch" type="range" min="0" max="2" step=".01" oninput="pitchChanged(this.value)" >
+            <output for="pitch" id="pitch_out">1.0</output>
+        </form>
+
+        <div class = "bottominfo">
+            <output id="display_out">Please wait... Loading...</output><br/>
+            <br/>
+            <output id="display_out2"></output><br/>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="fmod.js"></script>
+    <script type="text/javascript" src="gapless_playback.js"></script>
+
+</body>
+</html>

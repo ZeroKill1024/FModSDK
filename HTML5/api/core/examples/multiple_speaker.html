@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="examples.css" media="all" />
+    <title>FMOD Examples - PlaySound</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" alt="FMOD Logo" src="images/logo.jpg">
+        </div>
+
+        <br/>
+        <br/>
+        <a href = "index.html"><- Return to menu</a>
+        <br/>
+        <br/>
+        <strong>Multiple Speaker Example</strong><br/>
+        Copyright (c) Firelight Technologies 2018-2021.  For help using FMOD please visit <a href="http://www.fmod.com">http://www.fmod.com/</a><br/>
+        Open browser debug console to see error messages and example logging output<br/>
+        <br/>
+        <p class="clickscreen">Click or touch screen to unmute audio!</p>
+        <br/>
+        <br/>
+        Speaker Mode is <output id="speakermode">unknown</output>.   Play modes will be disabled based on speaker mode<br/>
+        <strong>Note:</strong>For 5.1 support only Mozilla Firefox has been tested to work out of the box.  Other browsers may need setting changes or workarounds.</br>
+        <br/>
+        <button type="button" id="button_0" onclick="onButtonPress(0)">Play</button> <output id="soundtype_0">Mono from front left speaker</output><br/>
+        <button type="button" id="button_1" onclick="onButtonPress(1)">Play</button> <output id="soundtype_1">Mono from front right speaker</output><br/>
+        <button type="button" id="button_2" onclick="onButtonPress(2)">Play</button> <output id="soundtype_2">Mono from center speaker</output><br/>
+        <button type="button" id="button_3" onclick="onButtonPress(3)">Play</button> <output id="soundtype_3">Mono from surround left speaker</output><br/>
+        <button type="button" id="button_4" onclick="onButtonPress(4)">Play</button> <output id="soundtype_4">Mono from surround right speaker</output><br/>
+        <button type="button" id="button_5" onclick="onButtonPress(5)">Play</button> <output id="soundtype_5">Mono from rear left speaker</output><br/>
+        <button type="button" id="button_6" onclick="onButtonPress(6)">Play</button> <output id="soundtype_6">Mono from rear right speaker</output><br/>
+        <button type="button" id="button_7" onclick="onButtonPress(7)">Play</button> <output id="soundtype_7">Stereo from front speakers</output><br/>
+        <button type="button" id="button_8" onclick="onButtonPress(8)">Play</button> <output id="soundtype_8">Stereo from front speakers (channel swapped)</output><br/>
+        <button type="button" id="button_9" onclick="onButtonPress(9)">Play</button> <output id="soundtype_9">Stereo (right only) from center speaker</output><br/>
+        
+        <div class = "bottominfo">
+            <output id="display_out">Please wait... Loading...</output><br/>
+            <br/>
+            <output id="display_out2"></output><br/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="fmod.js"></script>
+    <script type="text/javascript" src="multiple_speaker.js"></script>
+
+</body>
+</html>

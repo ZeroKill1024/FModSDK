@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+def fmod_api_root=project.file('../../../../../..').absolutePath
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "org.fmod.example"
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String[]", "FMOD_LIBS", "{ \"fmodL\", \"fmodstudioL\" }")
+            externalNativeBuild {
+                ndkBuild {
+                    arguments 'FMOD_API_ROOT=' + fmod_api_root,
+                        'FMOD_LIB_SUFFIX=L'
+                }
+            }
+        }
+        release {
+            buildConfigField("String[]", "FMOD_LIBS", "{ \"fmod\", \"fmodstudio\" }")
+            externalNativeBuild {
+                ndkBuild {
+                    arguments 'FMOD_API_ROOT=' + fmod_api_root,
+                        'FMOD_LIB_SUFFIX='
+                }
+            }
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path "Android.mk"
+        }
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['res',fmod_api_root + '/studio/examples/media']
+        }
+    }
+}
+
+dependencies {
+    implementation files(fmod_api_root + '/core/lib/fmod.jar')
+}
